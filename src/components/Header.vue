@@ -8,6 +8,7 @@ const user = computed(() => store.state.user)
 const isLoggedIn = computed(() => user.value !== null)
 const isScrolled = ref(false);
 const isMenuShown = ref(false);
+const searchQuery = ref('');
 
 const handleScroll = () => {
     const scrollAmount = isScrolled.value ? 100 : 150
@@ -18,9 +19,9 @@ const toggleMenu = () => {
     isMenuShown.value = !isMenuShown.value;
 };
 
-const closeMenu = () => {
-    isMenuShown.value = false;
-};
+const search = () => {
+    console.log(searchQuery);
+}
 
 watch(isMenuShown, () => {
     if (isMenuShown.value) {
@@ -50,21 +51,33 @@ onUnmounted(() => {
                 <nav class="menu" :class="isMenuShown && 'shown'">
                     <ul class="menu-list">
                         <li class="menu-list__item menu-list__item--active">
-                            <RouterLink to="/" @click="closeMenu">Витрина</RouterLink>
+                            <RouterLink to="/" @click="isMenuShown = false">Витрина</RouterLink>
                         </li>
                         <li class="menu-list__item">
-                            <RouterLink to="/about" @click="closeMenu">О компании</RouterLink>
+                            <RouterLink to="/about" @click="isMenuShown = false">О компании</RouterLink>
                         </li>
                         <li class="menu-list__item">
-                            <RouterLink to="/faq" @click="closeMenu">Вопросы и ответы</RouterLink>
+                            <RouterLink to="/faq" @click="isMenuShown = false">Вопросы и ответы</RouterLink>
                         </li>
                         <li class="menu-list__item">
-                            <RouterLink to="/contacts" @click="closeMenu">Контакты</RouterLink>
+                            <RouterLink to="/contacts" @click="isMenuShown = false">Контакты</RouterLink>
                         </li>
                     </ul>
                 </nav>
                 <div class="search">
-                    <Input placeholder="Поиск" />
+                    <Input 
+                        type="text"
+                        :has-action="true"
+                        v-model="searchQuery"
+                        @action-clicked="search"
+                        placeholder="Поиск"
+                    >
+                        <template #action-icon>
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="#search-icon" />
+                            </svg>
+                        </template>
+                    </Input>
                 </div>
                 <div class="header-controls">
                     <BonusButton v-if="isLoggedIn" :bonusAmount="user!.bonusAmount" />
@@ -83,7 +96,19 @@ onUnmounted(() => {
                 </div>
             </div>
             <div class="search-row">
-                <Input placeholder="Поиск" />
+                <Input 
+                    type="text"
+                    :has-action="true"
+                    v-model="searchQuery"
+                    @action-clicked="search"
+                    placeholder="Поиск"
+                >
+                    <template #action-icon>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#search-icon" />
+                        </svg>
+                    </template>
+                </Input>
             </div>
         </div>
     </header>

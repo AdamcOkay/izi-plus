@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Props {
-    theme: 'blue' | 'white'
+    theme?: 'blue' | 'white'
 }
 
 const props = withDefaults(defineProps<Props>(), { theme: 'blue' });

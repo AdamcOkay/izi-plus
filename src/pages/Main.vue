@@ -11,22 +11,22 @@ const filters: Filter[] = [
     {
         id: "sport",
         label: "Спорт",
-        visualUrl: "/public/filters/sport.png"
+        visualUrl: "/filters/sport.png"
     },
     {
         id: "health",
         label: "Здоровье",
-        visualUrl: "/public/filters/health.png",
+        visualUrl: "/filters/health.png",
     },
     {
         id: "subscriptions",
         label: "Подписки",
-        visualUrl: "/public/filters/subscriptions.png",
+        visualUrl: "/filters/subscriptions.png",
     },
     {
         id: "food",
         label: "Еда",
-        visualUrl: "/public/filters/food.png",
+        visualUrl: "/filters/food.png",
     }
 ]
 

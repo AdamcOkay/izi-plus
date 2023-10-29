@@ -14,7 +14,9 @@ const inputChecked = ref(isChecked);
 
 watch(props, () => {
     inputChecked.value = props.isChecked
-})
+});
+
+defineEmits(['filter-change']);
 </script>
 
 <template>

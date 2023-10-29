@@ -253,7 +253,16 @@ export const store = createStore<State>({
         toggleFavourite(state, id: string) {
             if (state.user === null) return;
             const companyIndex = state.user.favourites.indexOf(id);
-            state.user.favourites.splice(companyIndex, 1);
+
+            if (companyIndex !== -1) {
+                state.user.favourites.splice(companyIndex, 1);
+                return;
+            }
+
+            state.user.favourites.push(id);
         },
+        setUser(state, user: User) {
+            state.user = user;
+        }
     },
 });

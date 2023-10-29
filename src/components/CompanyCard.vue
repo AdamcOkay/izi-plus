@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { Company } from '@/store';
 import { router } from '@/router';
 import { BonusButton } from '@/components/ui';
@@ -12,11 +12,12 @@ interface Props {
 const props = defineProps<Props>();
 const { id, name, showcaseVisual, showcaseTitle, showcaseDescription, discount } = props.company;
 const store = useStore();
-const isFavourite = computed<boolean>(() => store.getters.isFavourite(id));
+const isFavourite = ref(store.getters.isFavourite(id));
 const priceStarts = computed<number>(() => store.getters.startPrice(id));
 
 const toggleFavourite = () => {
     store.commit('toggleFavourite', id);
+    isFavourite.value = store.getters.isFavourite(id);
 }
 
 const goToCompanyPage = () => {
