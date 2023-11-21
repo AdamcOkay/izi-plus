@@ -1,0 +1,22 @@
+{
+    "id": "user-1",
+    "picture": {
+        "thumb": {
+            "default": "/pfp-icon.png",
+            "double": "/pfp-icon@2x.png"
+        },
+        "main": {
+            "default": "/pfp-picture.png",
+            "double": "/pfp-picture@2x.png"
+        }
+    },
+    "fullName": "Владимир Булавин",
+    "email": "email@example.com",
+    "phone": "+7 777 000 0000",
+    "workplace": "Технодом",
+    "position": "Арт-директор",
+    "bonusAmount": 2000,
+    "purchases": [],
+    "favourites": [],
+    "acessible": []
+}

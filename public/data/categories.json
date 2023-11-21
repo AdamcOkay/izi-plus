@@ -1,0 +1,22 @@
+[
+    {
+        "id": "sport",
+        "label": "Спорт",
+        "visual": {}
+    },
+    {
+        "id": "health",
+        "label": "Здоровье",
+        "visual": {}
+    },
+    {
+        "id": "subscriptions",
+        "label": "Подписки",
+        "visual": {}
+    },
+    {
+        "id": "food",
+        "label": "Еда",
+        "visual": {}
+    }
+]

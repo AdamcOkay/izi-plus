@@ -1,0 +1,34 @@
+[
+    {
+        "id": "skillbox",
+        "title": "Обучение в Skillbox",
+        "description": "Получай знание в самой крутой школе чего бы там ни было...",
+        "visual": {},
+        "category": "subscriptions",
+        "discount": 20
+    },
+    {
+        "id": "ivi",
+        "title": "Подписка на ivi",
+        "description": "Подписка на онлайн-кинотеатр ivi",
+        "visual": {},
+        "category": "subscriptions",
+        "discount": 0
+    },
+    {
+        "id": "wink",
+        "title": "Подписка на wink",
+        "description": "Сервис интерактивного телевидения и онлайн-кинотеатра.",
+        "visual": {},
+        "category": "subscriptions",
+        "discount": 0
+    },
+    {
+        "id": "sber-health",
+        "title": "СберЗдоровье",
+        "description": "Получай знание в самой крутой школе чего бы там ни было...",
+        "visual": {},
+        "category": "health",
+        "discount": 0
+    }
+]
