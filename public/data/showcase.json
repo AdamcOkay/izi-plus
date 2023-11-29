@@ -9,7 +9,8 @@
             "desktop": "/products/skillbox/showcase.png"
         },
         "category": "subscriptions",
-        "discount": 20
+        "discount": 20,
+        "startingPrice": 2000
     },
     {
         "id": "ivi",
@@ -21,7 +22,8 @@
             "desktop": "/products/ivi/showcase.png"
         },
         "category": "subscriptions",
-        "discount": 0
+        "discount": 0,
+        "startingPrice": 500
     },
     {
         "id": "wink",
@@ -33,7 +35,8 @@
             "desktop": "/products/wink/showcase.png"
         },
         "category": "subscriptions",
-        "discount": 0
+        "discount": 0,
+        "startingPrice": 500
     },
     {
         "id": "sber-health",
@@ -45,6 +48,7 @@
             "desktop": "/products/sber-health/showcase.png"
         },
         "category": "health",
-        "discount": 0
+        "discount": 0,
+        "startingPrice": 2000
     }
 ]

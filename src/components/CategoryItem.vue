@@ -1,32 +1,37 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
+import { Visual } from '@/types';
+import { Image } from '@/components/ui'
 
-export interface FilterItemProps {
-    id: string;
-    imageUrl: string;
+export interface CategoryItemProps {
+    category: {
+        id: string;
+        label: string;
+        visual: Visual
+    }
     isChecked: boolean;
-    label: string;
 }
 
-const props = defineProps<FilterItemProps>();
-const { id, imageUrl, isChecked, label } = props;
+const props = defineProps<CategoryItemProps>();
+const { category, isChecked } = props;
+const { id, label, visual } = category
 const inputChecked = ref(isChecked);
 
 watch(props, () => {
     inputChecked.value = props.isChecked
 });
 
-defineEmits(['filter-change']);
+defineEmits(['category-change']);
 </script>
 
 <template>
     <label :for="id">
-        <input type="checkbox" :id="id" :checked="inputChecked" @change="$emit('filter-change', id)">
-        <div class="filter-item">
-            <div class="filter-visual">
-                <img :src="imageUrl" :alt="id" />
+        <input type="checkbox" :id="id" :checked="inputChecked" @change="$emit('category-change', id)">
+        <div class="category-item">
+            <div class="category-visual">
+                <Image :visual="visual" :alt="id" />
             </div>
-            <p class="filter-label">{{ label }}</p>
+            <p class="category-label">{{ label }}</p>
         </div>
     </label>
 </template>
@@ -44,14 +49,14 @@ input {
     width: 0;
 }
 
-.filter-item {
+.category-item {
     display: grid;
     grid-template-columns: 4.5rem;
     align-items: center;
     gap: 0.25rem;
 }
 
-.filter-visual {
+.category-visual {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,7 +71,7 @@ img {
     max-width: 2.5rem;
 }
 
-.filter-label {
+.category-label {
     width: 100%;
     text-align: center;
     font-size: 0.75rem;
@@ -74,32 +79,32 @@ img {
     line-height: 1rem;
 }
 
-input:checked~.filter-item .filter-visual {
+input:checked~.category-item .category-visual {
     background: var(--blue-gradient);
 }
 
-input:checked~.filter-item .filter-label {
+input:checked~.category-item .category-label {
     color: var(--blue-400);
 }
 
-.filter-item:hover .filter-label {
+.category-item:hover .category-label {
     color: var(--blue-400);
 }
 
 
 @media only screen and (min-width: 950px) {
-    .filter-item {
+    .category-item {
         grid-template-columns: 3.5rem 1fr;
         gap: 0.75rem;
         width: auto;
     }
 
-    .filter-visual {
+    .category-visual {
         flex: 1;
         flex-basis: 100%;
     }
 
-    .filter-label {
+    .category-label {
         text-align: left;
         font-size: 0.875rem;
     }

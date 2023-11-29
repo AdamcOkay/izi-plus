@@ -1,19 +1,18 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
-import { Company } from '@/store';
+import { ref } from 'vue';
+import { Company } from '@/types';
 import { router } from '@/router';
-import { BonusButton } from '@/components/ui';
 import { useStore } from '@/composables';
+import { BonusButton, Image } from '@/components/ui';
 
 interface Props {
     company: Company
 }
 
 const props = defineProps<Props>();
-const { id, name, showcaseVisual, showcaseTitle, showcaseDescription, discount } = props.company;
+const { id, title, description, visual, discount, startingPrice } = props.company;
 const store = useStore();
 const isFavourite = ref(store.getters.isFavourite(id));
-const priceStarts = computed<number>(() => store.getters.startPrice(id));
 
 const toggleFavourite = () => {
     store.commit('toggleFavourite', id);
@@ -28,13 +27,13 @@ const goToCompanyPage = () => {
 <template>
     <div class="company-card">
         <RouterLink :to="`/company/${id}`" class="visual">
-            <img :src="showcaseVisual" :alt="name" />
+            <Image :visual="visual" :alt="title" class="image"/>
             <span class="discount" v-if="discount > 0">-{{ discount }}%</span>
         </RouterLink>
         <div class="info">
             <RouterLink :to="`/company/${id}`" class="text">
-                <h2>{{ showcaseTitle }}</h2>
-                <p>{{ showcaseDescription }}</p>
+                <h2>{{ title }}</h2>
+                <p>{{ description }}</p>
             </RouterLink>
             <div class="controls">
                 <button class="favourite-button" :class="isFavourite && 'is-favourite'" @click="toggleFavourite">
@@ -42,7 +41,7 @@ const goToCompanyPage = () => {
                         <use xlink:href="#heart-icon" />
                     </svg>
                 </button>
-                <BonusButton :is-from="true" :bonus-amount="priceStarts" @click="goToCompanyPage" class="price" />
+                <BonusButton :is-from="true" :bonus-amount="startingPrice" @click="goToCompanyPage" class="price" />
             </div>
         </div>
     </div>
@@ -66,8 +65,7 @@ a {
     position: relative;
 }
 
-img {
-    width: 100%;
+.image {
     height: 100%;
 }
 

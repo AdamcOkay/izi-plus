@@ -27,7 +27,7 @@ button {
     justify-content: center;
     gap: 0.25rem;
     min-width: 3.5rem;
-    max-width: 6rem;
+    max-width: 6.5rem;
     padding: 0.5rem 0.75rem;
     border-radius: 2rem;
     background: var(--blue-gradient);

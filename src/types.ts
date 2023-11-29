@@ -1,8 +1,21 @@
-type FilterId = string;
-type FilterVisualUrl = string;
-
-export type Filter = {
-    id: FilterId;
-    label: string;
-    visualUrl: FilterVisualUrl;
+export type Visual = {
+    main: string;
+    double: string;
+    desktop?: string;
 };
+
+export type Category = {
+    id: string;
+    label: string;
+    visual: Visual;
+};
+
+export interface Company {
+    id: string;
+    title: string;
+    description: string;
+    visual: Visual;
+    category: string;
+    discount: number;
+    startingPrice: number
+}
