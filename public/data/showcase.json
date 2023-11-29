@@ -3,7 +3,11 @@
         "id": "skillbox",
         "title": "Обучение в Skillbox",
         "description": "Получай знание в самой крутой школе чего бы там ни было...",
-        "visual": {},
+        "visual": {
+            "default": "/products/skillbox/mob-showcase.png",
+            "double": "/products/skillbox/mob-showcase@2x.png",
+            "desktop": "/products/skillbox/showcase.png"
+        },
         "category": "subscriptions",
         "discount": 20
     },
