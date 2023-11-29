@@ -39,7 +39,11 @@
         "id": "sber-health",
         "title": "СберЗдоровье",
         "description": "Получай знание в самой крутой школе чего бы там ни было...",
-        "visual": {},
+        "visual": {
+            "default": "/products/sber-health/mob-showcase.png",
+            "double": "/products/sber-health/mob-showcase@2x.png",
+            "desktop": "/products/sber-health/showcase.png"
+        },
         "category": "health",
         "discount": 0
     }

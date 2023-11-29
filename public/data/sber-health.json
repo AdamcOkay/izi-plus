@@ -1,6 +1,10 @@
 {
     "id": "sber-health",
-    "visual": {},
+    "visual": {
+        "default": "/products/sber-health/mob-product.png",
+        "double": "/products/sber-health/mob-product@2x.png",
+        "desktop": "/products/sber-health/product.png"
+    },
     "title": "СберЗдоровье",
     "info": [
         "Устройте кинотеатр у себя дома! Смотрите онлайн фильмы хорошего качества в приятной домашней обстановке и в удобное для вас время."
@@ -8,7 +12,11 @@
     "pricing": [
         {
             "id": "cheap",
-            "visual": {},
+            "visual": {
+                "default": "/products/sber-health/pricing/mob-cheap.png",
+                "double": "/products/sber-health/pricing/mob-cheap@2x.png",
+                "desktop": "/products/sber-health/pricing/cheap.png"
+            },
             "title": "Одна подписка для всей семьи или друзей",
             "description": "Создай персональное пространство для каждого и подключай до пяти устройств. И всё это в одной подписке.",
             "price": 2000
