@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import { Input, Checkbox, MainButton } from '@/components/ui';
-import { User } from '@/store';
 import { useStore } from '@/composables';
 import { router } from '@/router';
 
@@ -18,25 +17,14 @@ const isFormInvalid = computed(() => {
 const passwordShown = ref(false);
 const store = useStore();
 
-const userData: User = {
-    id: 'user-1',
-    profilePictureUrl: '/pfp-icon.png',
-    fullName: 'Владимир Булавин',
-    email: 'email@example.com',
-    phone: '+7 777 000 0000',
-    workplace: 'Технодом',
-    position: 'Арт-директор',
-    bonusAmount: 2000,
-    purchases: [],
-    favourites: [],
-    acessible: []
-}
-
-const authUser = () => {
+const authUser = async () => {
     if (formData.value.email !== 'email@example.com' || formData.value.password !== '123') {
         alert('Неверный логин или пароль');
         return;
     }
+
+    const response = await fetch('/data/user.json');
+    const userData = await response.json();
 
     store.commit('setUser', userData);
     router.push('/')

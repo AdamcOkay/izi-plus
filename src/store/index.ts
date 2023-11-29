@@ -1,20 +1,6 @@
 import { InjectionKey } from 'vue';
 import { createStore, Store } from 'vuex';
-import { Category, Company } from '@/types';
-
-export interface User {
-    id: string;
-    profilePictureUrl: string;
-    fullName: string;
-    email: string;
-    phone: string;
-    workplace: string;
-    position: string;
-    bonusAmount: number;
-    purchases: string[];
-    favourites: string[];
-    acessible: string[];
-}
+import { Category, Company, User } from '@/types';
 
 export interface State {
     currentCategory: string;

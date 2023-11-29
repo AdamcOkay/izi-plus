@@ -17,5 +17,22 @@ export interface Company {
     visual: Visual;
     category: string;
     discount: number;
-    startingPrice: number
+    startingPrice: number;
+}
+
+export interface User {
+    id: string;
+    picture: {
+        thumb: Visual;
+        profile: Visual;
+    };
+    fullName: string;
+    email: string;
+    phone: string;
+    workplace: string;
+    position: string;
+    bonusAmount: number;
+    purchases: string[];
+    favourites: string[];
+    acessible: string[];
 }

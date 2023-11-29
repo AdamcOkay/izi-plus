@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useStore } from '@/composables'
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue';
-import { BonusButton, Input } from '@/components/ui';
+import { BonusButton, Image, Input } from '@/components/ui';
 
 const store = useStore();
 const user = computed(() => store.state.user)
@@ -65,18 +65,13 @@ onUnmounted(() => {
                     </ul>
                 </nav>
                 <div class="search">
-                    <Input 
-                        type="text"
-                        :has-action="true"
-                        v-model="searchQuery"
-                        @action-clicked="search"
-                        placeholder="Поиск"
-                    >
-                        <template #action-icon>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <use xlink:href="#search-icon" />
-                            </svg>
-                        </template>
+                    <Input type="text" :has-action="true" v-model="searchQuery" @action-clicked="search"
+                        placeholder="Поиск">
+                    <template #action-icon>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#search-icon" />
+                        </svg>
+                    </template>
                     </Input>
                 </div>
                 <div class="header-controls">
@@ -86,7 +81,7 @@ onUnmounted(() => {
                             xmlns="http://www.w3.org/2000/svg">
                             <use xlink:href="#user-icon" />
                         </svg>
-                        <img v-if="isLoggedIn" :src="user?.profilePictureUrl" :alt="user?.fullName">
+                        <Image v-if="isLoggedIn" :visual="user!.picture.thumb" :alt="user!.fullName" />
                     </RouterLink>
                     <button class="menu-button" @click="toggleMenu">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -96,18 +91,12 @@ onUnmounted(() => {
                 </div>
             </div>
             <div class="search-row">
-                <Input 
-                    type="text"
-                    :has-action="true"
-                    v-model="searchQuery"
-                    @action-clicked="search"
-                    placeholder="Поиск"
-                >
-                    <template #action-icon>
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="#search-icon" />
-                        </svg>
-                    </template>
+                <Input type="text" :has-action="true" v-model="searchQuery" @action-clicked="search" placeholder="Поиск">
+                <template #action-icon>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#search-icon" />
+                    </svg>
+                </template>
                 </Input>
             </div>
         </div>

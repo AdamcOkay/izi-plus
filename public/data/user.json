@@ -2,12 +2,12 @@
     "id": "user-1",
     "picture": {
         "thumb": {
-            "main": "/pfp-icon.png",
-            "double": "/pfp-icon@2x.png"
+            "main": "/user/pfp-icon.png",
+            "double": "/user/pfp-icon@2x.png"
         },
         "profile": {
-            "main": "/pfp-picture.png",
-            "double": "/pfp-picture@2x.png"
+            "main": "/user/pfp-picture.png",
+            "double": "/user/pfp-picture@2x.png"
         }
     },
     "fullName": "Владимир Булавин",
