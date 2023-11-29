@@ -19,14 +19,8 @@
         "id": "subscriptions",
         "label": "Подписки",
         "visual": {
-            "desktop": {
-                "default": "/categories/subscriptions.png",
-                "double": "/categories/subscriptions@2x.png"
-            },
-            "mobile": {
-                "default": "/categories/subscriptions.png",
-                "double": "/categories/subscriptions@2x.png"
-            }
+            "default": "/categories/subscriptions.png",
+            "double": "/categories/subscriptions@2x.png"
         }
     },
     {
