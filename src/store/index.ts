@@ -1,11 +1,11 @@
 import { InjectionKey } from 'vue';
 import { createStore, Store } from 'vuex';
-import { Category, Company, User } from '@/types';
+import { Category, CompanyShowcase, User } from '@/types';
 
 export interface State {
     currentCategory: string;
     categories: Category[];
-    companies: Company[];
+    companies: CompanyShowcase[];
     user: null | User;
 }
 
@@ -47,7 +47,7 @@ export const store = createStore<State>({
         setUser(state, user: User) {
             state.user = user;
         },
-        setCompanies(state, companies: Company[]) {
+        setCompanies(state, companies: CompanyShowcase[]) {
             state.companies = [...companies];
         },
     },

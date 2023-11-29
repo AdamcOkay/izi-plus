@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { Company } from '@/types';
+import { CompanyShowcase } from '@/types';
 import { router } from '@/router';
 import { useStore } from '@/composables';
-import { BonusButton, Image } from '@/components/ui';
+import { BonusButton, FavouriteButton, Image } from '@/components/ui';
 
 interface Props {
-    company: Company
+    company: CompanyShowcase
 }
 
 const props = defineProps<Props>();
@@ -36,11 +36,7 @@ const goToCompanyPage = () => {
                 <p>{{ description }}</p>
             </RouterLink>
             <div class="controls">
-                <button class="favourite-button" :class="isFavourite && 'is-favourite'" @click="toggleFavourite">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <use xlink:href="#heart-icon" />
-                    </svg>
-                </button>
+                <FavouriteButton :is-favourite="isFavourite" @click="toggleFavourite" class="favourite-button "/>
                 <BonusButton :is-from="true" :bonus-amount="startingPrice" @click="goToCompanyPage" class="price" />
             </div>
         </div>
@@ -114,22 +110,6 @@ p {
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: var(--white);
-    border: none;
-    border-radius: 50%;
-    outline: none;
-    transition: 0.1s background-color linear;
-}
-
-.favourite-button.is-favourite {
-    --icon-clr: var(--white);
-
-    background-color: var(--pink);
 }
 
 .price {

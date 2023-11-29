@@ -10,7 +10,7 @@ export type Category = {
     visual: Visual;
 };
 
-export interface Company {
+export interface CompanyShowcase {
     id: string;
     title: string;
     description: string;
@@ -18,6 +18,22 @@ export interface Company {
     category: string;
     discount: number;
     startingPrice: number;
+}
+
+export interface CompanyPricing {
+    id: string;
+    visual: Visual;
+    title: string;
+    description: string;
+    price: number;
+}
+
+export interface Company {
+    id: string;
+    title: string;
+    info: string;
+    visual:Visual;
+    pricing: CompanyPricing[];
 }
 
 export interface User {

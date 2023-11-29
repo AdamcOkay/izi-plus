@@ -41,7 +41,7 @@ onMounted(async () => {
 <template>
     <Header />
 
-    <body>
+    <main>
         <div class="container">
             <section class="showcase">
                 <div class="showcase-header">
@@ -70,7 +70,7 @@ onMounted(async () => {
                 </div>
             </section>
         </div>
-    </body>
+    </main>
 </template>
 
 <style scoped>
