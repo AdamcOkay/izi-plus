@@ -27,7 +27,11 @@
         "id": "wink",
         "title": "Подписка на wink",
         "description": "Сервис интерактивного телевидения и онлайн-кинотеатра.",
-        "visual": {},
+        "visual": {
+            "default": "/products/wink/mob-showcase.png",
+            "double": "/products/wink/mob-showcase@2x.png",
+            "desktop": "/products/wink/showcase.png"
+        },
         "category": "subscriptions",
         "discount": 0
     },
