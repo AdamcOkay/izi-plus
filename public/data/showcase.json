@@ -12,14 +12,9 @@
         "title": "Подписка на ivi",
         "description": "Подписка на онлайн-кинотеатр ivi",
         "visual": {
-            "desktop": {
-                "default": "/products/ivi/showcase.png",
-                "double": "/products/ivi/showcase@2x.png"
-            },
-            "mobile": {
-                "default": "/products/ivi/mob-showcase.png",
-                "double": "/products/ivi/mob-showcase@2x.png"
-            }
+            "default": "/products/ivi/mob-showcase.png",
+            "double": "/products/ivi/mob-showcase@2x.png",
+            "desktop": "/products/ivi/showcase.png"
         },
         "category": "subscriptions",
         "discount": 0

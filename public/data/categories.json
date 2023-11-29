@@ -3,28 +3,16 @@
         "id": "sport",
         "label": "Спорт",
         "visual": {
-            "desktop": {
-                "default": "/categories/sport.png",
-                "double": "/categories/sport@2x.png"
-            },
-            "mobile": {
-                "default": "/categories/sport.png",
-                "double": "/categories/sport@2x.png"
-            }
+            "default": "/categories/sport.png",
+            "double": "/categories/sport@2x.png"
         }
     },
     {
         "id": "health",
         "label": "Здоровье",
         "visual": {
-            "desktop": {
-                "default": "/categories/health.png",
-                "double": "/categories/health@2x.png"
-            },
-            "mobile": {
-                "default": "/categories/health.png",
-                "double": "/categories/health@2x.png"
-            }
+            "default": "/categories/health.png",
+            "double": "/categories/health@2x.png"
         }
     },
     {
@@ -45,14 +33,8 @@
         "id": "food",
         "label": "Еда",
         "visual": {
-            "desktop": {
-                "default": "/categories/food.png",
-                "double": "/categories/food@2x.png"
-            },
-            "mobile": {
-                "default": "/categories/food.png",
-                "double": "/categories/food@2x.png"
-            }
+            "default": "/categories/food.png",
+            "double": "/categories/food@2x.png"
         }
     }
 ]

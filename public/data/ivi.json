@@ -1,14 +1,9 @@
 {
     "id": "ivi",
     "visual": {
-        "desktop": {
-            "default": "/products/ivi/product.png",
-            "double": "/products/ivi/product@2x.png"
-        },
-        "mobile": {
-            "default": "/products/ivi/mob-product.png",
-            "double": "/products/ivi/mob-product@2x.png"
-        }
+        "default": "/products/ivi/mob-product.png",
+        "double": "/products/ivi/mob-product@2x.png",
+        "desktop": "/products/ivi/product.png"
     },
     "title": "Онлайн-кинотеатр Иви",
     "info": [
@@ -18,14 +13,9 @@
         {
             "id": "cheap",
             "visual": {
-                "desktop": {
-                    "default": "/products/ivi/pricing/cheap.png",
-                    "double": "/products/ivi/pricing/cheap@2x.png"
-                },
-                "mobile": {
-                    "default": "/products/ivi/pricing/mob-cheap.png",
-                    "double": "/products/ivi/pricing/mob-cheap@2x.png"
-                }
+                "default": "/products/ivi/pricing/mob-cheap.png",
+                "double": "/products/ivi/pricing/mob-cheap@2x.png",
+                "desktop": "/products/ivi/pricing/cheap.png"
             },
             "title": "Одна подписка для всей семьи или друзей",
             "description": "Создай персональное пространство для каждого и подключай до пяти устройств. И всё это в одной подписке.",
@@ -34,14 +24,9 @@
         {
             "id": "mid",
             "visual": {
-                "desktop": {
-                    "default": "/products/ivi/pricing/mid.png",
-                    "double": "/products/ivi/pricing/mid@2x.png"
-                },
-                "mobile": {
-                    "default": "/products/ivi/pricing/mob-mid.png",
-                    "double": "/products/ivi/pricing/mob-mid@2x.png"
-                }
+                "default": "/products/ivi/pricing/mob-mid.png",
+                "double": "/products/ivi/pricing/mob-mid@2x.png",
+                "desktop": "/products/ivi/pricing/mid.png"
             },
             "title": "Одна подписка для всей семьи или друзей",
             "description": "Создай персональное пространство для каждого и подключай до пяти устройств. И всё это в одной подписке.",
@@ -50,14 +35,9 @@
         {
             "id": "expensive",
             "visual": {
-                "desktop": {
-                    "default": "/products/ivi/pricing/expensive.png",
-                    "double": "/products/ivi/pricing/expensive@2x.png"
-                },
-                "mobile": {
-                    "default": "/products/ivi/pricing/mob-expensive.png",
-                    "double": "/products/ivi/pricing/mob-expensive@2x.png"
-                }
+                "default": "/products/ivi/pricing/mob-expensive.png",
+                "double": "/products/ivi/pricing/mob-expensive@2x.png",
+                "desktop": "/products/ivi/pricing/expensive.png"
             },
             "title": "Одна подписка для всей семьи или друзей",
             "description": "Создай персональное пространство для каждого и подключай до пяти устройств. И всё это в одной подписке.",
