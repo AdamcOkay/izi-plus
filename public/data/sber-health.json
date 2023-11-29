@@ -1,7 +1,7 @@
 {
     "id": "sber-health",
     "visual": {
-        "default": "/products/sber-health/mob-product.png",
+        "main": "/products/sber-health/mob-product.png",
         "double": "/products/sber-health/mob-product@2x.png",
         "desktop": "/products/sber-health/product.png"
     },
@@ -13,7 +13,7 @@
         {
             "id": "cheap",
             "visual": {
-                "default": "/products/sber-health/pricing/mob-cheap.png",
+                "main": "/products/sber-health/pricing/mob-cheap.png",
                 "double": "/products/sber-health/pricing/mob-cheap@2x.png",
                 "desktop": "/products/sber-health/pricing/cheap.png"
             },

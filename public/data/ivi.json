@@ -1,7 +1,7 @@
 {
     "id": "ivi",
     "visual": {
-        "default": "/products/ivi/mob-product.png",
+        "main": "/products/ivi/mob-product.png",
         "double": "/products/ivi/mob-product@2x.png",
         "desktop": "/products/ivi/product.png"
     },
@@ -13,7 +13,7 @@
         {
             "id": "cheap",
             "visual": {
-                "default": "/products/ivi/pricing/mob-cheap.png",
+                "main": "/products/ivi/pricing/mob-cheap.png",
                 "double": "/products/ivi/pricing/mob-cheap@2x.png",
                 "desktop": "/products/ivi/pricing/cheap.png"
             },
@@ -24,7 +24,7 @@
         {
             "id": "mid",
             "visual": {
-                "default": "/products/ivi/pricing/mob-mid.png",
+                "main": "/products/ivi/pricing/mob-mid.png",
                 "double": "/products/ivi/pricing/mob-mid@2x.png",
                 "desktop": "/products/ivi/pricing/mid.png"
             },
@@ -35,7 +35,7 @@
         {
             "id": "expensive",
             "visual": {
-                "default": "/products/ivi/pricing/mob-expensive.png",
+                "main": "/products/ivi/pricing/mob-expensive.png",
                 "double": "/products/ivi/pricing/mob-expensive@2x.png",
                 "desktop": "/products/ivi/pricing/expensive.png"
             },

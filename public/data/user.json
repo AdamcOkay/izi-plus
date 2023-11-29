@@ -2,11 +2,11 @@
     "id": "user-1",
     "picture": {
         "thumb": {
-            "default": "/pfp-icon.png",
+            "main": "/pfp-icon.png",
             "double": "/pfp-icon@2x.png"
         },
-        "main": {
-            "default": "/pfp-picture.png",
+        "profile": {
+            "main": "/pfp-picture.png",
             "double": "/pfp-picture@2x.png"
         }
     },

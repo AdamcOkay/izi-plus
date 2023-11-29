@@ -4,7 +4,7 @@
         "title": "Обучение в Skillbox",
         "description": "Получай знание в самой крутой школе чего бы там ни было...",
         "visual": {
-            "default": "/products/skillbox/mob-showcase.png",
+            "main": "/products/skillbox/mob-showcase.png",
             "double": "/products/skillbox/mob-showcase@2x.png",
             "desktop": "/products/skillbox/showcase.png"
         },
@@ -16,7 +16,7 @@
         "title": "Подписка на ivi",
         "description": "Подписка на онлайн-кинотеатр ivi",
         "visual": {
-            "default": "/products/ivi/mob-showcase.png",
+            "main": "/products/ivi/mob-showcase.png",
             "double": "/products/ivi/mob-showcase@2x.png",
             "desktop": "/products/ivi/showcase.png"
         },
@@ -28,7 +28,7 @@
         "title": "Подписка на wink",
         "description": "Сервис интерактивного телевидения и онлайн-кинотеатра.",
         "visual": {
-            "default": "/products/wink/mob-showcase.png",
+            "main": "/products/wink/mob-showcase.png",
             "double": "/products/wink/mob-showcase@2x.png",
             "desktop": "/products/wink/showcase.png"
         },
@@ -40,7 +40,7 @@
         "title": "СберЗдоровье",
         "description": "Получай знание в самой крутой школе чего бы там ни было...",
         "visual": {
-            "default": "/products/sber-health/mob-showcase.png",
+            "main": "/products/sber-health/mob-showcase.png",
             "double": "/products/sber-health/mob-showcase@2x.png",
             "desktop": "/products/sber-health/showcase.png"
         },

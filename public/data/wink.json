@@ -1,7 +1,7 @@
 {
     "id": "wink",
     "visual": {
-        "default": "/products/wink/mob-product.png",
+        "main": "/products/wink/mob-product.png",
         "double": "/products/wink/mob-product@2x.png",
         "desktop": "/products/wink/product.png"
     },
@@ -13,7 +13,7 @@
         {
             "id": "cheap",
             "visual": {
-                "default": "/products/wink/pricing/mob-cheap.png",
+                "main": "/products/wink/pricing/mob-cheap.png",
                 "double": "/products/wink/pricing/mob-cheap@2x.png",
                 "desktop": "/products/wink/pricing/cheap.png"
             },

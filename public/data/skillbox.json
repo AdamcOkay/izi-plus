@@ -1,7 +1,7 @@
 {
     "id": "skillbox",
     "visual": {
-        "default": "/products/skillbox/mob-product.png",
+        "main": "/products/skillbox/mob-product.png",
         "double": "/products/skillbox/mob-product@2x.png",
         "desktop": "/products/skillbox/product.png"
     },
@@ -13,7 +13,7 @@
         {
             "id": "mid",
             "visual": {
-                "default": "/products/skillbox/pricing/mob-mid.png",
+                "main": "/products/skillbox/pricing/mob-mid.png",
                 "double": "/products/skillbox/pricing/mob-mid@2x.png",
                 "desktop": "/products/skillbox/pricing/mid.png"
             },

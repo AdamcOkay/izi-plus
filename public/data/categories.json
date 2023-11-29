@@ -3,7 +3,7 @@
         "id": "sport",
         "label": "Спорт",
         "visual": {
-            "default": "/categories/sport.png",
+            "main": "/categories/sport.png",
             "double": "/categories/sport@2x.png"
         }
     },
@@ -11,7 +11,7 @@
         "id": "health",
         "label": "Здоровье",
         "visual": {
-            "default": "/categories/health.png",
+            "main": "/categories/health.png",
             "double": "/categories/health@2x.png"
         }
     },
@@ -19,7 +19,7 @@
         "id": "subscriptions",
         "label": "Подписки",
         "visual": {
-            "default": "/categories/subscriptions.png",
+            "main": "/categories/subscriptions.png",
             "double": "/categories/subscriptions@2x.png"
         }
     },
@@ -27,7 +27,7 @@
         "id": "food",
         "label": "Еда",
         "visual": {
-            "default": "/categories/food.png",
+            "main": "/categories/food.png",
             "double": "/categories/food@2x.png"
         }
     }
