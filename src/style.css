@@ -92,7 +92,8 @@ button:disabled {
     margin-inline: auto;
 }
 
-h1 {
+h1,
+.text-h1 {
     font-size: 1.5rem;
     font-weight: 800;
     line-height: 1.2;

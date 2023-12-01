@@ -1,32 +1,29 @@
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useStore } from '@/composables';
+import { Modal } from '@/components/ui';
+
+const store = useStore();
+const modal = computed(() => store.state.modal);
+
+const closeModal = () => {
+    store.commit('setModalData', { action: () => { } })
+    store.commit('closeModal')
+};
+
+const emitModalAction = () => {
+    modal.value.action();
+    store.commit('setModalData', { action: () => { } });
+    store.commit('closeModal')
+}
+
+
 </script>
 
 <template>
-    <!-- <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <use xlink:href="#checkmark-icon" />
-    </svg>
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <use xlink:href="#eye-slash-icon" />
-    </svg>
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <use xlink:href="#eye-icon" />
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <use xlink:href="#filter-icon" />
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <use xlink:href="#heart-icon" />
-    </svg>
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <use xlink:href="#search-icon" />
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <use xlink:href="#hamburger-icon" />
-    </svg>
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <use xlink:href="#user-icon" />
-    </svg> -->
     <RouterView />
+    <Modal v-if="modal.shown" :title="modal.title" :body="modal.body" :btn-text="modal.btnText" @modal-action="emitModalAction"
+        @close-modal="closeModal" />
 </template>
 
 <style scoped></style>

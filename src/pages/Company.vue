@@ -1,21 +1,13 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router'
-import { useStore } from '@/composables';
 import { Company } from '@/types';
 import Header from '@/components/Header.vue';
 import { FavouriteButton, Image } from '@/components/ui';
 import PricingCard from '@/components/PricingCard.vue';
 
 const router = useRoute()
-const store = useStore();
 const company = ref<Company>();
-const isFavourite = ref(store.getters.isFavourite(router.params.id));
-
-const toggleFavourite = () => {
-    store.commit('toggleFavourite', router.params.id);
-    isFavourite.value = store.getters.isFavourite(router.params.id);
-}
 
 onMounted(async () => {
     const response = await fetch(`/data/${router.params.id}.json`);
@@ -36,7 +28,7 @@ onMounted(async () => {
     <main v-if="company">
         <section class="visual" :style="`background-color: ${company.visualBgColor}`">
             <Image :visual="company.visual" alt="title" class="company-visual" />
-            <FavouriteButton :is-favourite="isFavourite" @click="toggleFavourite" class="favourite-button" />
+            <FavouriteButton :id="company.id" class="favourite-button" />
         </section>
         <div class="container company-content">
             <section class="info">

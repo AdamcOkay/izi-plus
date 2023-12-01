@@ -4,5 +4,6 @@ import FavouriteButton from './buttons/FavouriteButton.vue';
 import Input from './form/Input.vue';
 import Checkbox from './form/Checkbox.vue';
 import Image from './image/Image.vue';
+import Modal from './modal/Modal.vue';
 
-export { MainButton, BonusButton, FavouriteButton, Input, Checkbox, Image };
+export { MainButton, BonusButton, FavouriteButton, Input, Checkbox, Image, Modal };

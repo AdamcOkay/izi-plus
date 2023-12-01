@@ -2,11 +2,19 @@ import { InjectionKey } from 'vue';
 import { createStore, Store } from 'vuex';
 import { Category, CompanyShowcase, User } from '@/types';
 
+type ModalData = {
+    shown: boolean;
+    title: string;
+    body: string;
+    btnText: string;
+    action: () => void;
+};
 export interface State {
     currentCategory: string;
     categories: Category[];
     companies: CompanyShowcase[];
     user: null | User;
+    modal: ModalData;
 }
 
 export const key: InjectionKey<Store<State>> = Symbol();
@@ -17,6 +25,13 @@ export const store = createStore<State>({
         categories: [],
         companies: [],
         user: null,
+        modal: {
+            shown: false,
+            title: '',
+            body: '',
+            btnText: 'OK',
+            action: () => {},
+        },
     },
     getters: {
         categorizedCompanies: (state) => (categoryId: string) => {
@@ -49,6 +64,15 @@ export const store = createStore<State>({
         },
         setCompanies(state, companies: CompanyShowcase[]) {
             state.companies = [...companies];
+        },
+        setModalData(state, data: ModalData) {
+            state.modal = { ...state.modal, ...data };
+        },
+        showModal(state) {
+            state.modal.shown = true;
+        },
+        closeModal(state) {
+            state.modal.shown = false;
         },
     },
 });

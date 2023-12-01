@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import { CompanyShowcase } from '@/types';
 import { router } from '@/router';
-import { useStore } from '@/composables';
 import { BonusButton, FavouriteButton, Image } from '@/components/ui';
 
 interface Props {
@@ -11,13 +9,6 @@ interface Props {
 
 const props = defineProps<Props>();
 const { id, title, description, visual, discount, startingPrice } = props.company;
-const store = useStore();
-const isFavourite = ref(store.getters.isFavourite(id));
-
-const toggleFavourite = () => {
-    store.commit('toggleFavourite', id);
-    isFavourite.value = store.getters.isFavourite(id);
-}
 
 const goToCompanyPage = () => {
     router.push({ path: `/company/${id}` });
@@ -36,7 +27,7 @@ const goToCompanyPage = () => {
                 <p>{{ description }}</p>
             </RouterLink>
             <div class="controls">
-                <FavouriteButton :is-favourite="isFavourite" @click="toggleFavourite" class="favourite-button "/>
+                <FavouriteButton :id="id" class="favourite-button "/>
                 <BonusButton :is-from="true" :bonus-amount="startingPrice" @click="goToCompanyPage" class="price" />
             </div>
         </div>
