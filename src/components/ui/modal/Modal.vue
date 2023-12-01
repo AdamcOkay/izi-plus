@@ -14,7 +14,7 @@ const { title, body, btnText } = props;
 
 const emit = defineEmits(['close-modal', 'modal-action']);
 
-const closeModal = (e) => {
+const closeModal = (e: Event) => {
     if (!backdrop.value || e.target !== backdrop.value) return;
     emit('close-modal');
 }
