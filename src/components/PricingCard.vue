@@ -47,6 +47,10 @@ const normalizedPrize = computed(() => price.toLocaleString('en').replace(/,/g, 
     border-radius: 1rem;
 }
 
+.visual {
+    max-width: 16.5rem;
+}
+
 .info {
     gap: 1rem;
 }

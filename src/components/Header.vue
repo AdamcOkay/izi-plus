@@ -273,6 +273,7 @@ img {
 
     .header-row {
         padding: 1rem 2rem;
+        margin-bottom: 1.5rem;
         background-color: var(--white);
         gap: 2.5rem;
         border-radius: 0 0 1rem 1rem;

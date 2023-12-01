@@ -133,5 +133,9 @@ onMounted(async () => {
     .visual {
         width: 100%;
     }
+
+    .company-content {
+        padding: 2rem 0 0;
+    }
 }
 </style>
