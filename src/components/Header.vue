@@ -200,6 +200,11 @@ img {
     box-shadow: var(--blue-shadow-center);
 }
 
+.menu-button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 .menu-button:hover,
 .menu-button:focus-visible {
     --icon-clr: var(--blue-400)
