@@ -195,14 +195,10 @@ img {
     justify-content: center;
     width: 2.5rem;
     height: 2.5rem;
+    padding: 0;
     background-color: var(--white);
     border-radius: 50%;
     box-shadow: var(--blue-shadow-center);
-}
-
-.menu-button svg {
-    width: 1.5rem;
-    height: 1.5rem;
 }
 
 .menu-button:hover,

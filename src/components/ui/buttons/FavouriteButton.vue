@@ -46,6 +46,7 @@ button {
     width: 2.5rem;
     height: 2.5rem;
     background-color: var(--white);
+    padding: 0;
     border: none;
     border-radius: 50%;
     outline: none;
@@ -56,10 +57,5 @@ button.is-favourite {
     --icon-clr: var(--white);
 
     background-color: var(--pink);
-}
-
-svg {
-    width: 1.5rem;
-    height: 1.5rem;
 }
 </style>
