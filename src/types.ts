@@ -33,6 +33,7 @@ export interface Company {
     title: string;
     info: string;
     visual:Visual;
+    visualBgColor: string;
     pricing: CompanyPricing[];
 }
 

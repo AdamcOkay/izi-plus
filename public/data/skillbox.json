@@ -5,6 +5,7 @@
         "double": "/products/skillbox/mob-product@2x.png",
         "desktop": "/products/skillbox/product.png"
     },
+    "visualBgColor": "#acc6dd",
     "title": "Skillbox",
     "info": [
         "Устройте кинотеатр у себя дома! Смотрите онлайн фильмы хорошего качества в приятной домашней обстановке и в удобное для вас время."

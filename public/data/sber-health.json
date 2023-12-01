@@ -5,6 +5,7 @@
         "double": "/products/sber-health/mob-product@2x.png",
         "desktop": "/products/sber-health/product.png"
     },
+    "visualBgColor": "#e3edf1",
     "title": "СберЗдоровье",
     "info": [
         "Устройте кинотеатр у себя дома! Смотрите онлайн фильмы хорошего качества в приятной домашней обстановке и в удобное для вас время."
